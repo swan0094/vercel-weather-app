@@ -1,0 +1,139 @@
+:root {
+  --font-family: Arial, sans-serif;
+  --background-color: #e0f7fa;
+  --dark-blue: #0277bd;
+  --medium-blue: #0288d1;
+  --light-blue: #81d4fa;
+  --hover-blue: #4fc3f7;
+  --hover-grey: #e0e0e0;
+  --clear-button-bg: #ff4d4d;
+  --clear-button-hover-bg: #ff1a1a;
+  --border-color: #ccc;
+  --border-radius: 5px;
+  --padding: 10px 20px;
+  --transition-duration: 0.3s;
+  --min-temp-color: #0277bd;
+  --max-temp-color: #d32f2f;
+}
+
+.weather-app {
+  font-family: var(--font-family);
+  text-align: center;
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: var(--dark-blue);
+}
+
+h2 {
+  font-size: 1.5em;
+  color: var(--medium-blue);
+}
+
+.locations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.location-tile {
+  background-color: var(--light-blue);
+  border: 1px solid var(--medium-blue);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+
+.location-tile:hover {
+  background-color: var(--hover-blue);
+}
+
+.weather-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.weather-info h3 {
+  font-size: 1.2em;
+  color: var(--dark-blue);
+}
+
+.weather-info p {
+  font-size: 1em;
+  color: var(--medium-blue);
+}
+
+.weather-details {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.map-container {
+  flex: 1;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.clear-button {
+  background-color: var(--clear-button-bg);
+  color: white;
+  border: none;
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration);
+}
+
+.clear-button:hover {
+  background-color: var(--clear-button-hover-bg);
+}
+
+.current-temp {
+  font-size: 2em;
+  color: var(--dark-blue);
+}
+
+.description {
+  font-size: 1.5em;
+  color: var(--medium-blue);
+}
+
+.min-temp {
+  color: var(--min-temp-color);
+}
+
+.max-temp {
+  color: var(--max-temp-color);
+}
+
+.week-overview {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.day-forecast {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: var(--light-blue);
+  border: 1px solid var(--medium-blue);
+  border-radius: var(--border-radius);
+  text-align: center;
+}
+
+.day-forecast img {
+  width: 50px;
+  height: 50px;
+}
