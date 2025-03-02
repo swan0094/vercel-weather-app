@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { Forecast, DailyForecast } from "@/app/forecast";
 import Skeleton from "react-loading-skeleton";
