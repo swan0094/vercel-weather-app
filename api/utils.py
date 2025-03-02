@@ -1,4 +1,4 @@
-from models.forecast import DailyForecast, HourlyForecast
+from forecast import DailyForecast, HourlyForecast
 
 def serialize_daily_forecast(daily_forecast: DailyForecast) -> dict:
     return {

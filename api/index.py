@@ -1,16 +1,10 @@
+from utils import serialize_daily_forecast, serialize_hourly_forecast
 from http.server import BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
-import json
-from flask_cors import CORS
-from models.forecast import Forecast
-from python_weather.enums import Kind, UltraViolet, WindDirection, Phase, HeatIndex
-
+from cachetools import TTLCache
 import python_weather
 import asyncio
-import os
-import time
-from cachetools import TTLCache
-from utils import serialize_daily_forecast, serialize_hourly_forecast
+import json
 
 cache = TTLCache(maxsize=100, ttl=600)
 
